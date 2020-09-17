@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Mark Birchall - Portfolio 2</title>
+</head>
+
+<body>
+
+    <header class="top">
+        <a href="index.html"><h1 id="pageheader">MARK BIRCHALL</h1></a>
+        <nav id="top-right">
+            <img src="svg/user-circle-solid.svg" />
+           <a href="#portfolio"><img src="svg/project-diagram-solid.svg" /></a>
+            <img src="svg/hand-sparkles-solid.svg" />
+            <a href="mailto:mark.birchall@gmail.com"><img src="svg/envelope-regular.svg" /></a>
+        </nav> 
+        <nav id="big-nav">
+            <ul>
+                <li><a href="#about">about</a></li>
+                <li><a href="#portfolio">portfolio</a></li>
+                <li><a href="#skills">skills</a></li>
+            </ul>
+        </nav>
+    </header>
+    <figure class="widepic">
+        <img src="img/pagetop.jpg" />
+        <figcaption>Felton Common, Bristol (2010)</figcaption>
+    </figure>
+    <main>
+        <section class="about intro">
+            <header class="section">
+                <img class="iconFill" src="svg/user-circle-solid.svg" />
+                <h2>About me:</h2>
+            </header>
+            <p>I'm currently re-training as a Front-end Web Developer through an intensive course run by <a
+                    href="https://nology.io" alt="nology website">nology</a>.
+            </p>
+            <p>In my free time, I enjoy coding, making music, playing
+                strategic board games and dogwalking.</p>
+        </section>
+
+        <section class="about more">
+            <header class="section">
+                <h2>More about me:</h2>
+            </header>
+            <p>I grew up in St. Helens, an industrial town in the  North West of England.</p>
+            <p>I studied Computer Science in Leicester, spent a couple of years in Oxford and then migrated to London where I worked as a freelance writer for a few magazines before getting a job as Production Editor on the Daily Telegraph's website. After 5 years at The Telegraph, I left and got a job in the public sector at CSCI (now CQC) the Commission for Social Care Inspection, where I worked with a Web Team specialising in Accessibility.</p>
+            <p>I returned to college to retrain as an Audio Engineer and then joined a small team working on indie iOS games, as Lead Programmer and Sound Designer. We succesfully published two games and learned about the importance of a well-thought out marketing strategy. I have had a variety of jobs since moving to South Bristol - including running my own Dog Boarding business.</p>
+            <p>Now I am ready to dive back into the tech sector where I am excited to start again as a Junior Developer with the knowledge and skills I have gained on the course.</p>
+                
+        </section>
+
+        <section class="portfolio intro">
+            <header class="section">
+                <img src="svg/project-diagram-solid.svg" />
+                <h2>Portfolio:</h2>
+            </header>
+            <p>Take a look at the <a href="#portfolio">projects</a> I have completed, training as a Junior Developer.</p>
+            <p>I have been working on personal and client-focused projects, expanding my knowledge of key coding concepts.</p>
+        </section>
+
+        <section class="portfolio more">
+            <header class="section">
+                <h2>Portfolio:</h2>
+            </header>
+            <div id="gallery">
+                <canvas id="portfolio-canvas">
+
+                    <!-- portfolio canvas -->
+                
+                </canvas>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda explicabo iusto impedit facilis. A
+                reprehenderit recusandae facilis dolorem. Repellat deleniti nemo consectetur quam fugit enim laboriosam,
+                labore aliquid porro magnam.</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis consectetur iusto reprehenderit
+                laborum magnam dolore minima asperiores distinctio aspernatur, necessitatibus, deleniti neque quae ipsum
+                quis, fuga commodi? Recusandae, incidunt maiores?</p>
+        </section>
+
+
+
+        <section class="skills intro">
+            <header class="section">
+                <img src="svg/hand-sparkles-solid.svg" />
+                <h2>Skills:</h2>
+            </header>
+            <p>Introductory paragraph leading into Skills section goes here.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis, iure facere, consequatur accusantium amet consectetur a explicabo?</p>
+        </section>
+
+        <section class="skills more">
+            <header class="section">
+                <h2>Skills:</h2>
+            </header>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur debitis amet velit quae aperiam voluptate minima dignissimos harum, doloremque ratione.</p>
+
+            <div id="icons">
+                <div class="webdev-skills">
+                    <img src="svg/html5-brands.svg" />
+                    <img src="svg/css3-alt-brands.svg" />
+                    <img src="svg/sass-brands.svg" />
+                    <img class="to-do" src="svg/js-brands.svg" />
+                    <img class="to-do" src="svg/git-square-brands.svg" />
+                    <img class="to-do" src="svg/github-square-brands.svg"/>
+                    <img class="to-do" src="svg/react-brands.svg" />
+                </div>
+                <hr>
+                <div class="other-skills">
+                    <img src="svg/adobe-brands.svg" />
+                    <img src="svg/file-audio-solid.svg" />
+                </div>
+            </div>
+            
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem iusto aspernatur deleniti! Delectus
+                adipisci voluptate facere quaerat quidem porro architecto id quos. In maxime provident at, modi dolores
+                illum nobis.</p>
+        </section>
+
+
+
+
+        <footer>
+            <p>&copy;[mb]2020: <a href="#about">about</a><a href="#portfolio">portfolio</a><a href="#skills">skills</a><a href="mailto:mark.birchall@gmail.com">contact</a></p>
+        </footer>
+
+    </main>
+
+
+    <canvas id="main-canvas">
+        browser does not support the HTML5 canvas tag
+    </canvas>
+    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="projects.js"></script>
+</body>
+
+
+</html>
