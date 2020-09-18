@@ -74,8 +74,9 @@ header.top {
   width: 100vw;
   height: 14vw;
   background-color: white;
-  box-shadow: 0px 1px 16px 4px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 4px 8px 8px rgba(0, 0, 0, 0.12);
   transform: rotate(0deg);
+  border-bottom: 1.8vw solid rgba(0, 255, 0, 0.5);
   z-index: 999;
 }
 header.top h1 {
@@ -259,11 +260,10 @@ main footer p a {
 */
 @media (min-width: 720px) {
   header.top {
-    position: static;
+    position: fixed;
     height: 2vw;
     transform: rotate(-2deg);
     margin-left: -1vw;
-    margin-top: -2vw;
     background-image: linear-gradient(white, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.6));
     border: none;
   }
@@ -283,8 +283,8 @@ main footer p a {
   }
   header.top nav#big-nav ul li {
     display: inline;
-    padding: 0 8vw;
-    font-size: 5vw;
+    padding: 1vw 0.5vw;
+    font-size: 3vw;
   }
   header.top nav#big-nav ul li a {
     position: relative;
