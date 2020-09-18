@@ -200,6 +200,14 @@ main section.more #gallery #portfolio-canvas {
   width: 450px;
   z-index: 2;
 }
+main section.more .project-info {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+main section.more .project-info img {
+  width: 2rem;
+}
 main section.skills.more #icons {
   background-color: rgba(255, 255, 255, 0.5);
   display: flex;

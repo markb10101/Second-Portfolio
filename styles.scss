@@ -253,7 +253,20 @@ main {
                 width: 450px;
                 z-index: 2;
             }
+
+
+
+
         } 
+
+    .project-info {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        img {
+            width: 2rem;
+        }
+    }
 
 
         
