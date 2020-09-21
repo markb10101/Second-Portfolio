@@ -44,13 +44,26 @@ ctx.save();
 window.addEventListener("resize",sizeStyleAdjustments);
 
 function sizeStyleAdjustments() {
-    
-    ctx.restore();
 
+
+    let deviceThreshold = 750;
+    let widthFactor = (window.innerWidth-deviceThreshold)/2;
+
+    // scale opacity of navbar to screenwidth
+    // using rgba as opacity affected child elements
+   // let navBar = document.getElementById('big-nav');
+   // navBar.style.backgroundColor = `rgba(0, 255, 0, ${widthFactor}%)`;
     
+
+   
+
+
+
+    ctx.restore();
 
     let canvas = document.getElementById('portfolio-canvas');
     let ctx = canvas.getContext("2d");
+
 
     canvas.width = gallery.offsetWidth;
     canvas.height = gallery.offsetHeight;
@@ -59,13 +72,7 @@ function sizeStyleAdjustments() {
     height = gallery.offsetHeight;
 
 
-    let deviceThreshold = 750;
-    let widthFactor = (window.innerWidth-deviceThreshold)/7;
 
-    // scale opacity of navbar to screenwidth
-    // using rgba as opacity affected child elements
-    let navBar = document.getElementById('big-nav');
-    navBar.style.backgroundColor = `rgba(0, 255, 0, ${widthFactor}%)`;
 
 
 

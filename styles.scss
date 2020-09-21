@@ -33,6 +33,16 @@ html {
     overflow-x: hidden; 
 }
 
+// #container {
+//     max-width: 1200px;
+//     min-height: 100vh;
+//     height: 100%;
+//     margin: 0 auto;
+//     box-shadow: 0rem 0rem 4rem #ddd;
+//    // background-image: linear-gradient(#fc9, #fff, #fff);
+
+// }
+
 /////////////////////////////////////////////////
 // define grid area names
 /////////////////////////////////////////////////
@@ -71,25 +81,27 @@ p {
     }
 }
 
-// canvas {
-//     display: block;
-//     position: fixed;
-//     z-index: -1;
-// }
 
 .widepic {
-    //border: 1px solid black;
+    width: 100%;
+    //max-width: 1200px;
+    height: 100vw; //image is square, this fixes height of container
     position: relative;       
     z-index: -1; 
 
     img {
         width: 100vw;
     }
+    canvas {
+        position: relative;
+        z-index: 2;
+    }
     figcaption {
         position: absolute;
         bottom: 0.5rem;
         right: 0.5rem;
         color: rgba(255,255,255,0.75);
+        z-index: 3;
     }    
 }
 
@@ -125,7 +137,7 @@ header.top {
         user-select: none;
         img {
             position: relative;
-            width: 4vw;
+            width: 6vw;
             margin: 4vw 0.5vw 2.5vw 3vw;
             bottom: 0.8rem;
             opacity: 25%;
@@ -206,6 +218,15 @@ main {
         h2 {
             font-size: 0.25rem;
             visibility: hidden;
+        }
+
+        img#headshot {
+            width: 20vw;
+            float: left;
+            box-shadow: $subtleBorder;
+            margin: 0.5rem 1rem 0 0;
+            
+            
         }
         p {
             font-size: 1rem;
@@ -372,13 +393,22 @@ main {
         }
 
         nav#top-right {
-            display: none;
+            // display: none;
+            img {
+                width: 7vw;
+            }
         }
 
         nav#big-nav {
             display: flex;
             justify-content: space-around;
-            background-color: $bg-nav;
+            background-color: rgba(0,255,0,1);
+            box-shadow: 0px 4px 8px 8px rgba(0,0,0,0.12);
+
+            // background-image: linear-gradient(  rgba(0, 255, 0, 1), 
+            //                                     rgba(0, 255, 0, 0.8),
+            //                                     rgba(0, 255, 0, 0.6));
+
 
             ul {
                 
