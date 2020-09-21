@@ -59,6 +59,10 @@ class GameWorld {
         this.context = this.canvas.getContext('2d');
         this.gameObjects = [];
 
+        //if(this.canvas.width>750){
+           // this.context.rotate(20*Math.PI/180);
+        //}
+
         this.createGrid();
 
         // call gameLoop() via animation frame request
@@ -139,6 +143,11 @@ class GameWorld {
         // calculate number of neighbours
         this.checkSurrounding();
 
+        // rotate canvas 2 degrees when wider screen detected
+        if(this.canvas.width>720){
+            this.context.rotate(-2*Math.PI/180);
+        }
+
         // clear canvas
         this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
 
@@ -146,6 +155,9 @@ class GameWorld {
         for (let i = 0; i < this.gameObjects.length; i++) {
             this.gameObjects[i].draw();
         }
+
+        
+
 
         // The loop function has reached it's end, keep requesting new frames
         setTimeout( () => {
@@ -158,6 +170,7 @@ class GameWorld {
             this.context.fillStyle = 'rgba(0,0,0,'+0.00025*yPos+')';
             this.context.fillRect( xPos, yPos, 2, 2 );
         }
+
     }
 }
 
