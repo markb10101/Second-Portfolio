@@ -1,5 +1,5 @@
 
-
+// grab width of photograph to use for canvas overlay
 let widePic = document.getElementById('wide-pic');
 
 // set 'frame rate', lower is faster
@@ -59,10 +59,6 @@ class GameWorld {
         this.context = this.canvas.getContext('2d');
         this.gameObjects = [];
 
-        //if(this.canvas.width>750){
-           // this.context.rotate(20*Math.PI/180);
-        //}
-
         this.createGrid();
 
         // call gameLoop() via animation frame request
@@ -93,11 +89,11 @@ class GameWorld {
 
     checkSurrounding ()
     {
-        // Loop over cells
+        // loop over cells
         for (let x = 0; x < GameWorld.numColumns; x++) {
             for (let y = 0; y < GameWorld.numRows; y++) {
 
-                // Count neighbours
+                // count live neighbours
                 let numAlive =  this.isAlive(x - 1, y - 1) + 
                                 this.isAlive(x, y - 1) + 
                                 this.isAlive(x + 1, y - 1) + 
@@ -110,19 +106,19 @@ class GameWorld {
                 let centerIndex = this.gridToIndex(x, y);
 
                 if (numAlive == 2){
-                    // Do nothing
+                    // cell stays the same
                     this.gameObjects[centerIndex].nextAlive = this.gameObjects[centerIndex].alive;
                 }else if (numAlive == 3){
-                    // Make alive
+                    // cell becomes alive
                     this.gameObjects[centerIndex].nextAlive = true;
                 }else{
-                    // Make dead
+                    // cell becomes dead
                     this.gameObjects[centerIndex].nextAlive = false;
                 }
             }
         }
 
-        // Apply the new state to the cells
+        // switch cells state to next frame
         for (let i = 0; i < this.gameObjects.length; i++) {
             this.gameObjects[i].alive = this.gameObjects[i].nextAlive;
         }
@@ -156,9 +152,6 @@ class GameWorld {
             this.gameObjects[i].draw();
         }
 
-        
-
-
         // The loop function has reached it's end, keep requesting new frames
         setTimeout( () => {
             window.requestAnimationFrame(() => this.gameLoop());
@@ -175,6 +168,6 @@ class GameWorld {
 }
 
 window.onload = () => {
-  // The page has loaded, start the game
+  // start conway animation on page load
   let gameWorld = new GameWorld('canvas');
 }
