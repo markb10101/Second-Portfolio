@@ -6,8 +6,52 @@ let widePic = document.getElementById('wide-pic');
 const animationSpeed = 5;
 
 
+///////////////////////////////////////
+// Add current time to page Footer
+
+// Store a pointer to the .clock element
+const clock = document.querySelector('.clock');
+
+// Write the date and time to the page
+const tickTock = () => {
+
+    // Get unformatted Date
+    const currentTime = new Date();
+
+    // Get Date
+    const date = currentTime.toDateString();
+
+    // Get current hours,minutes,seconds
+    const hours = currentTime.getHours()
+    const minutes = currentTime.getMinutes();
+    const seconds = currentTime.getSeconds();
+
+    // Build time string including leading zeroes
+    var writeTime = `${date} - `;
+    if (hours<10) {writeTime += "0";}
+        writeTime += hours + ":";
+    if (minutes<10) {writeTime += "0";}
+        writeTime += minutes + ":";
+    if (seconds<10) {writeTime += "0";}
+        writeTime += seconds;
+
+    // Inject time string into .clock element
+    clock.innerHTML = writeTime;
+
+}
+
+// Call tickTock on page load, so time appears immediately
+tickTock();
+
+// Then call tickTock every 1000ms, so time updates every second
+setInterval(tickTock, 1000)
 
 
+
+
+
+
+// noisy video dots
 function drawDots(){
 
     for(var i=0;i<10000;i++){
@@ -18,6 +62,7 @@ function drawDots(){
     }
 }
 
+// create cell class
 class Cell
 {
     // does not work as var or const
