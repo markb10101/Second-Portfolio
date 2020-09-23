@@ -51,17 +51,6 @@ setInterval(tickTock, 1000)
 
 
 
-// noisy video dots
-function drawDots(){
-
-    for(var i=0;i<10000;i++){
-        let xPos = Math.random()*widePic.offsetWidth;
-        let yPos = Math.random()*widePic.offsetHeight;
-        this.context.fillStyle = "rgba(0,0,0,1)";
-        this.context.fillRect( xPos, yPos, 2, 2 );
-    }
-}
-
 // create cell class
 class Cell
 {
@@ -202,12 +191,14 @@ class GameWorld {
             window.requestAnimationFrame(() => this.gameLoop());
         }, animationSpeed)
 
-        for(var i=0;i<5000;i++){
-            let xPos = Math.random()*widePic.offsetWidth;
-            let yPos = Math.random()*widePic.offsetHeight;
-            this.context.fillStyle = 'rgba(0,0,0,'+0.00025*yPos+')';
-            this.context.fillRect( xPos, yPos, 2, 2 );
-        }
+
+        // //draw noise
+        // for(var i=0;i<5000;i++){
+        //     let xPos = Math.random()*widePic.offsetWidth;
+        //     let yPos = Math.random()*widePic.offsetHeight;
+        //     this.context.fillStyle = 'rgba(0,0,0,'+0.00025*yPos+')';
+        //     this.context.fillRect( xPos, yPos, 2, 2 );
+        // }
 
     }
 }
