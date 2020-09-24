@@ -179,6 +179,10 @@ main section.more #gallery {
   justify-content: center;
   align-items: center;
 }
+main section.more #gallery #card.project img {
+  width: 200px;
+  height: 200px;
+}
 main section.more #gallery .left-arrow, main section.more #gallery .right-arrow {
   font-size: 4rem;
   font-weight: 800;
@@ -217,12 +221,24 @@ main section.more #gallery #portfolio-canvas {
 main section.more .project-info {
   display: flex;
   width: 100%;
-  justify-content: center;
+  justify-content: space-around;
 }
 main section.more .project-info img {
   width: 2rem;
 }
-main section.skills.more #icons {
+main section.more .project-info div {
+  padding: 0 1rem;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.3);
+  width: 450px;
+}
+main section.more .project-info div h3 {
+  font-size: 1.5rem;
+}
+main section.skills.more #iconwrap {
+  display: flex;
+  justify-content: center;
+}
+main section.skills.more #iconwrap #icons {
   background-color: rgba(255, 255, 255, 0.5);
   display: flex;
   flex-flow: wrap;
@@ -230,28 +246,29 @@ main section.skills.more #icons {
   padding-top: 0.5rem;
   box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.3);
   margin-bottom: 1rem;
+  width: 60%;
 }
-main section.skills.more #icons .webdev-skills img {
+main section.skills.more #iconwrap #icons .webdev-skills img {
   width: 2rem;
   margin: 0 0.8rem;
 }
-main section.skills.more #icons .webdev-skills .to-do {
+main section.skills.more #iconwrap #icons .webdev-skills image.to-do {
   opacity: 10%;
 }
-main section.skills.more #icons hr {
+main section.skills.more #iconwrap #icons hr {
   visibility: hidden;
   width: 100%;
 }
-main section.skills.more #icons .other-skills img {
+main section.skills.more #iconwrap #icons .other-skills img {
   width: 2rem;
   margin: 0 0.8rem;
 }
-main section.skills.more #icons .other-skills img.to-do {
+main section.skills.more #iconwrap #icons .other-skills img.to-do {
   opacity: 10%;
 }
 main footer {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   padding: 2rem 0 0.5rem 0;
   width: 100%;

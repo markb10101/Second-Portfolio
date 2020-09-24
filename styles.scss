@@ -30,7 +30,7 @@ $subtleBorder: 0px 1px 4px 0px rgba(0,0,0,0.3);
 }
 
 html {
-    overflow-x: hidden; 
+    overflow-x: hidden; //chck
 }
 
 /////////////////////////////////////////////////
@@ -225,6 +225,11 @@ main {
             justify-content: center;
             align-items: center;
 
+            #card.project img {
+                width: 200px;
+                height: 200px;
+            }
+
             .left-arrow, .right-arrow {
                 font-size: 4rem;
                 font-weight: 800;
@@ -263,16 +268,33 @@ main {
         .project-info {
             display: flex;
             width: 100%;
-            justify-content: center;
+            justify-content: space-around;
             img {
                 width: 2rem;
+            }
+
+            div {
+                //border: 1px solid black;
+                padding: 0 1rem;
+                box-shadow: $subtleBorder;
+                width: 450px;
+
+                h3 {
+                    font-size: 1.5rem;
+                }
             }
         }
     }
 
     section.skills.more {
 
-        #icons {
+
+        #iconwrap {
+
+            display: flex;
+            justify-content: center;
+            
+            #icons {
             background-color: $whiteOverlay;
             display: flex;
             flex-flow: wrap;
@@ -280,34 +302,38 @@ main {
             padding-top: 0.5rem;
             box-shadow: $subtleBorder;
             margin-bottom: 1rem;
+            width: 60%;
 
-            .webdev-skills {
-                img{
-                    width: 2rem;
-                    margin: 0 0.8rem;
+
+                .webdev-skills {
+                    img{
+                        width: 2rem;
+                        margin: 0 0.8rem;
+                    }
+                    image.to-do {
+                        opacity: 10%;
+                    }
                 }
-                .to-do {
-                    opacity: 10%;
-                }
-            }
             
-            hr {visibility: hidden;width: 100%;}
+                hr {visibility: hidden;width: 100%;}
 
-            .other-skills {
-                img{
-                    width: 2rem;
-                    margin: 0 0.8rem;
-                }               
-                img.to-do {
-                    opacity: 10%;
-                }
-            }          
+                .other-skills {
+                    img{
+                        width: 2rem;
+                        margin: 0 0.8rem;
+                    }               
+                    img.to-do {
+                        opacity: 10%;
+                    }
+                }          
+            }
         }
     }
 
     footer {
         display: flex;
-        flex-direction: column;
+        //flex-direction: column;
+        justify-content: space-between;
         align-items: center;
         padding: 2rem 0 0.5rem 0;
         width: 100%;

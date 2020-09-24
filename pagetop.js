@@ -1,11 +1,3 @@
-
-// grab width of photograph to use for canvas overlay
-let widePic = document.getElementById('wide-pic');
-
-// set 'frame rate', lower is faster
-const animationSpeed = 5;
-
-
 ///////////////////////////////////////
 // Add current time to page Footer
 
@@ -45,6 +37,18 @@ tickTock();
 
 // Then call tickTock every 1000ms, so time updates every second
 setInterval(tickTock, 1000)
+
+
+
+
+
+
+
+// grab width of photograph to use for canvas overlay
+let widePic = document.getElementById('wide-pic');
+
+// set 'frame rate', lower is faster
+const animationSpeed = 5;
 
 
 
@@ -205,5 +209,6 @@ class GameWorld {
 
 window.onload = () => {
   // start conway animation on page load
-  let gameWorld = new GameWorld('canvas');
+  // check if toggled on
+  //let gameWorld = new GameWorld('canvas');
 }

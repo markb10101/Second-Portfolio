@@ -1,13 +1,161 @@
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css" />
     <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
-    <link rel="stylesheet" href="dummy.css" />
-    <title>LOADING . . .</title>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Mark Birchall - Portfolio 2</title>
 </head>
+
 <body>
-    <h1>!?!?</h1>
+    <!-- <div id="container"> -->
+        <header class="top">
+            <a href="index.html"><h1 id="pageheader">MARK BIRCHALL</h1></a>
+            <nav id="top-right">
+                <a href="mailto:mark.birchall@gmail.com"><img src="svg/contact.svg" /></a>
+            </nav> 
+            <nav id="big-nav">
+                
+                <ul>
+                    <li><!-- <a href="#about">about</a> --> </li>
+                    <li><!-- <a href="#portfolio">portfolio</a> --> </li>
+                    <li><!-- <a href="#skills">skills</a> --> </li>
+                </ul>
+                
+            </nav>
+        </header>
+        
+        <figure class="widepic">
+            <img src="img/pagetop.jpg" id="wide-pic"/>
+            <canvas id="canvas"></canvas>
+            <figcaption>Felton Common, Bristol (2010)</figcaption>
+        
+        </figure>
+        
+        <main>
+            <section class="about intro">
+                <header class="section">
+                    <img class="iconFill" src="svg/user-circle-solid.svg" />
+                    <h2>About me:</h2>
+                </header>
+                <p>I'm currently re-training as a Front-end Web Developer through an intensive course run by <a
+                        href="https://nology.io" alt="nology website">nology</a>.
+                </p>
+                <p>In my free time, I enjoy coding, making music, playing
+                    strategic board games and dogwalking.</p>
+            </section>
+
+            <section class="about more">
+                <header class="section">
+                    <h2>More about me:</h2>
+                </header>
+                <img src="img/headshot.png" id="headshot"/>
+                <p>I grew up in St. Helens, an industrial town in the  North West of England.</p>
+                <p>I studied Computer Science in Leicester, spent a couple of years in Oxford and then migrated to London where I worked as a freelance writer for a few magazines before getting a job as Production Editor on the Daily Telegraph's website. After 5 years at The Telegraph, I left and got a job in the public sector at CSCI (now CQC) the Commission for Social Care Inspection, where I worked with a Web Team specialising in Accessibility.</p>
+                
+                <p>After dabbling in Music Production, Game Development, Dog Boarding and Shelf Stacking, I have decided to retrain as a Web Developer and I'm excited to dive back into the tech sector armed with a wide breadth of knowledge and skills to add to my previous experience.</p>
+                    
+            </section>
+
+            <section class="portfolio intro">
+                <header class="section">
+                    <img src="svg/project-diagram-solid.svg" />
+                    <h2>Portfolio:</h2>
+                </header>
+                <p>Take a look at the <a href="#portfolio">projects</a> that I have completed, training as a Junior Developer.</p>
+                <p>I have been working on personal and client-focused projects, expanding my knowledge of key coding concepts.</p>
+            </section>
+
+            <section class="portfolio more">
+                <header class="section">
+                    <h2>Portfolio:</h2>
+                </header>
+
+                <p>Here are some of the projects I am currently working on as part of the nology Software Developer course.</p>
+
+                <div id="gallery">
+                    <div id="card" class="project">
+                        <a href="https://calculator.markbirchall.net" target="_blank"><img src="img/proj-01-calc.jpg"/></a>
+                    </div>
+
+
+                    <!--<span class="left-arrow" id="prev"><</span>
+                    <canvas id="portfolio-canvas">Your browser does not support canvas...</canvas> 
+                    <span class="right-arrow" id="next">></span>
+                    <div><span class="label" id="info">project: 8</span></div>-->
+                </div>
+
+                <div class="project-info">
+                    <div><h3>Project 1: Calculator</h3><p><a href="https://calculator.markbirchall.net" target="_blank">[Live]</a> <a href="https://github.com/markb10101/project-calculator" target="_blank">[Code]</a></p>
+                    <p>The brief was to construct a working calculator using only HTML5,SCSS and Javascript.</p>
+                   </div>
+                </div>
+
+                
+                
+            </section>
+
+
+
+            <section class="skills intro">
+                <header class="section">
+                    <img src="svg/hand-sparkles-solid.svg" />
+                    <h2>Skills:</h2>
+                </header>
+                <p>I have gained skills covering a variety of applications, frameworks and toolsets.</p>
+                <p>These include HTML5, CSS, Sass, Github, VS Code, Javascript and React. I am also proficient in Photoshop and a variety of audio editors.</p>
+            </section>
+
+            <section class="skills more">
+                <header class="section">
+                    <h2>Skills:</h2>
+                </header>
+                <p>I have been bringing my experience of web development up to date by gaining technical skills in many modern web-focused technologies, including HTML5, CSS, SASS, git, github, Javascript and React.</p>
+
+                <div id="iconwrap">
+                    <div id="icons">
+                        <div class="webdev-skills">
+                            <img src="svg/html5-brands.svg" />
+                            <img src="svg/css3-alt-brands.svg" />
+                            <img src="svg/sass-brands.svg" />
+                            <img src="svg/js-brands.svg" />
+                            <img src="svg/git-square-brands.svg" />
+                        </div>
+                        <hr>
+                        <div class="other-skills">
+                            <img src="svg/github-square-brands.svg"/>
+                            <img src="svg/react-brands.svg" />
+                            <img src="svg/adobe-brands.svg" />
+                            <!-- <img src="svg/file-audio-solid.svg" /> -->
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </section>
+
+
+
+
+            <footer>
+                
+                <p class="copyright">&copy;[mb]2020 <a href="mailto:mark.birchall@gmail.com">contact</a></p>
+            <!-- <a href="#about">about</a>
+            <a href="#portfolio">portfolio</a>
+            <a href="#skills">skills</a>
+            <a href="mailto:mark.birchall@gmail.com">contact</a> -->
+                    
+                    <p class="clock"></p>
+                
+            </footer>
+
+        </main>
+        <script type="text/javascript" src="portfolio.js"></script>
+        <script type="text/javascript" src="pagetop.js"></script>
+    <!-- </div> -->
 </body>
+
+
 </html>
