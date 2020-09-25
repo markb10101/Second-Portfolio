@@ -210,5 +210,5 @@ class GameWorld {
 window.onload = () => {
   // start conway animation on page load
   // check if toggled on
-  //let gameWorld = new GameWorld('canvas');
+ let gameWorld = new GameWorld('canvas');
 }

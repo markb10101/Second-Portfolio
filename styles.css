@@ -9,6 +9,10 @@ html {
   overflow-x: hidden;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .about.intro {
   grid-area: abou;
 }

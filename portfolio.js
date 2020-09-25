@@ -53,12 +53,7 @@ function sizeStyleAdjustments() {
     // using rgba as opacity affected child elements
    // let navBar = document.getElementById('big-nav');
    // navBar.style.backgroundColor = `rgba(0, 255, 0, ${widthFactor}%)`;
-    
-
-   
-
-
-
+  
     ctx.restore();
 
     let canvas = document.getElementById('portfolio-canvas');
@@ -70,9 +65,6 @@ function sizeStyleAdjustments() {
 
     width = gallery.offsetWidth;
     height = gallery.offsetHeight;
-
-
-
 
 
 
